@@ -10,11 +10,12 @@ const {
 
 const whiteList = [
   'http://localhost:3000',
-  'http://localhost:8080'
+  'http://localhost:8080',
+  'https://my-api-rest-platzi.herokuapp.com/'
 ]
 const options = {
   origin: (origin, callback) => {
-    if(whiteList.includes(origin)) {
+    if(whiteList.includes(origin) || !origin) {
       callback(null, true)
     } else {
       callback(new Error("not allowed"))
