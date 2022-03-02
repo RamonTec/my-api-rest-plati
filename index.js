@@ -39,6 +39,6 @@ app.use(logErrors)
 app.use(boomErrorHandler)
 app.use(errorHandler)
 
-app.listen(conf.port, () => {
+app.listen(process.env.PORT || conf.port, () => {
   console.log("--- Server run in port:", conf.port)
 })
