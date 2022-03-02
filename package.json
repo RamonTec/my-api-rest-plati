@@ -4,10 +4,11 @@
   "description": "Curso Rest With Platzi",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
+    "lint": "eslint",
+    "worker": "node index.js",
     "start": "node index.js",
-    "lint": "eslint"
+    "test": "node test.js",
   },
   "author": "Elias Estrabao",
   "license": "ISC",
